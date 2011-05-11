@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E76E8B1-C502-4106-8921-3FE4E16B0EE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Nancy.ViewEngines.Spark</RootNamespace>
+    <AssemblyName>Nancy.Mono.ViewEngines.Spark</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Spark, Version=1.5.0.0, Culture=neutral, PublicKeyToken=7f8549eed921a12c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dependencies\spark\Spark.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Nancy.ViewEngines.Spark\Caching\DefaultCacheServiceProvider.cs">
+      <Link>Caching\DefaultCacheServiceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\Caching\ICacheServiceProvider.cs">
+      <Link>Caching\ICacheServiceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\Descriptors\BuildDescriptorParams.cs">
+      <Link>Descriptors\BuildDescriptorParams.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\Descriptors\DefaultDescriptorBuilder.cs">
+      <Link>Descriptors\DefaultDescriptorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\Descriptors\DescriptorFilterExtensions.cs">
+      <Link>Descriptors\DescriptorFilterExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\Descriptors\IDescriptorBuilder.cs">
+      <Link>Descriptors\IDescriptorBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\Descriptors\IDescriptorFilter.cs">
+      <Link>Descriptors\IDescriptorFilter.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\ActionContext.cs">
+      <Link>ActionContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\NancySparkView.cs">
+      <Link>NancySparkView.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\SparkViewEngine.cs">
+      <Link>SparkViewEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy.ViewEngines.Spark\ViewContext.cs">
+      <Link>ViewContext.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Caching\" />
+    <Folder Include="Descriptors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nancy.Mono\Nancy.Mono.csproj">
+      <Project>{1BC2CD16-5E4C-46EA-AA8F-6490307BC07D}</Project>
+      <Name>Nancy.Mono</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

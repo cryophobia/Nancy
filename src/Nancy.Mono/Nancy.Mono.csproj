@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1BC2CD16-5E4C-46EA-AA8F-6490307BC07D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Nancy</RootNamespace>
+    <AssemblyName>Nancy.Mono</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Nancy\AfterPipeline.cs">
+      <Link>AfterPipeline.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BeforePipeline.cs">
+      <Link>BeforePipeline.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\DefaultNancyBootStrapper.cs">
+      <Link>DefaultNancyBootStrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\DefaultNancyContextFactory.cs">
+      <Link>DefaultNancyContextFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\DefaultResponseFormatter.cs">
+      <Link>DefaultResponseFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\DynamicDictionary.cs">
+      <Link>DynamicDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\DynamicDictionaryValue.cs">
+      <Link>DynamicDictionaryValue.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\FileSystemViewSourceProvider.cs">
+      <Link>FileSystemViewSourceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\FormatterExtensions.cs">
+      <Link>FormatterExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\HeadResponse.cs">
+      <Link>HeadResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\HttpFile.cs">
+      <Link>HttpFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\HttpMultiparSubStream.cs">
+      <Link>HttpMultiparSubStream.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\HttpMultipart.cs">
+      <Link>HttpMultipart.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\HttpMultipartBoundary.cs">
+      <Link>HttpMultipartBoundary.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\HttpMultipartBuffer.cs">
+      <Link>HttpMultipartBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\HttpStatusCode.cs">
+      <Link>HttpStatusCode.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\IHideObjectMembers.cs">
+      <Link>IHideObjectMembers.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\INancyContextFactory.cs">
+      <Link>INancyContextFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\INancyEngine.cs">
+      <Link>INancyEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\INancyModuleCatalog.cs">
+      <Link>INancyModuleCatalog.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\IResponseFormatter.cs">
+      <Link>IResponseFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\IRootPathProvider.cs">
+      <Link>IRootPathProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\MimeTypes.cs">
+      <Link>MimeTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\NancyContext.cs">
+      <Link>NancyContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\NancyEngine.cs">
+      <Link>NancyEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\NancyModule.cs">
+      <Link>NancyModule.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\NotFoundResponse.cs">
+      <Link>NotFoundResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Request.cs">
+      <Link>Request.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Response.cs">
+      <Link>Response.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\AppDomainAssemblyTypeScanner.cs">
+      <Link>Bootstrapper\AppDomainAssemblyTypeScanner.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\DefaultModuleKeyGenerator.cs">
+      <Link>Bootstrapper\DefaultModuleKeyGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\IApplicationPipelines.cs">
+      <Link>Bootstrapper\IApplicationPipelines.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\IModuleKeyGenerator.cs">
+      <Link>Bootstrapper\IModuleKeyGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\INancyBootStrapper.cs">
+      <Link>Bootstrapper\INancyBootStrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\INancyBootStrapperPerRequestRegistration.cs">
+      <Link>Bootstrapper\INancyBootStrapperPerRequestRegistration.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\ModuleRegistrationType.cs">
+      <Link>Bootstrapper\ModuleRegistrationType.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\NancyBootStrapperBase.cs">
+      <Link>Bootstrapper\NancyBootStrapperBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\NancyBootStrapperLocator.cs">
+      <Link>Bootstrapper\NancyBootStrapperLocator.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\BootStrapper\TypeRegistration.cs">
+      <Link>Bootstrapper\TypeRegistration.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Cookies\INancyCookie.cs">
+      <Link>Cookies\INancyCookie.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Cookies\NancyCookie.cs">
+      <Link>Cookies\NancyCookie.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Cryptography\Base64Helpers.cs">
+      <Link>Cryptography\Base64Helpers.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Cryptography\DefaultEncryptionProvider.cs">
+      <Link>Cryptography\DefaultEncryptionProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Cryptography\DefaultHmacProvider.cs">
+      <Link>Cryptography\DefaultHmacProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Cryptography\HmacComparer.cs">
+      <Link>Cryptography\HmacComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Cryptography\IEncryptionProvider.cs">
+      <Link>Cryptography\IEncryptionProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Cryptography\IHmacProvider.cs">
+      <Link>Cryptography\IHmacProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Extensions\AssemblyExtensions.cs">
+      <Link>Extensions\AssemblyExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Extensions\CollectionExtensions.cs">
+      <Link>Extensions\CollectionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Extensions\StringExtensions.cs">
+      <Link>Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Helpers\HttpEncoder.cs">
+      <Link>Helpers\HttpEncoder.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Helpers\HttpUtility.cs">
+      <Link>Helpers\HttpUtility.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Helpers\ReflectionUtils.cs">
+      <Link>Helpers\ReflectionUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\IO\RequestStream.cs">
+      <Link>IO\RequestStream.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Json\JavaScriptConverter.cs">
+      <Link>Json\JavaScriptConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Json\JavaScriptSerializer.cs">
+      <Link>Json\JavaScriptSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Json\JavaScriptTypeResolver.cs">
+      <Link>Json\JavaScriptTypeResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Json\Json.cs">
+      <Link>Json\Json.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Json\JsonDeserializer.cs">
+      <Link>Json\JsonDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Json\JsonSerializer.cs">
+      <Link>Json\JsonSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Json\ScriptIgnoreAttribute.cs">
+      <Link>Json\ScriptIgnoreAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Json\StringBuilderExtensions.cs">
+      <Link>Json\StringBuilderExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\BindingContext.cs">
+      <Link>ModelBinding\BindingContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\BindingDefaults.cs">
+      <Link>ModelBinding\BindingDefaults.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\DefaultBinder.cs">
+      <Link>ModelBinding\DefaultBinder.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\DefaultFieldNameConverter.cs">
+      <Link>ModelBinding\DefaultFieldNameConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\DefaultModelBinderLocator.cs">
+      <Link>ModelBinding\DefaultModelBinderLocator.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\DynamicModelBinderAdapter.cs">
+      <Link>ModelBinding\DynamicModelBinderAdapter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\IBinder.cs">
+      <Link>ModelBinding\IBinder.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\IBodyDeserializer.cs">
+      <Link>ModelBinding\IBodyDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\IFieldNameConverter.cs">
+      <Link>ModelBinding\IFieldNameConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\IModelBinder.cs">
+      <Link>ModelBinding\IModelBinder.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\IModelBinderLocator.cs">
+      <Link>ModelBinding\IModelBinderLocator.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\ITypeConverter.cs">
+      <Link>ModelBinding\ITypeConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\ModelBindingException.cs">
+      <Link>ModelBinding\ModelBindingException.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\ModuleExtensions.cs">
+      <Link>ModelBinding\ModuleExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\DefaultBodyDeserializers\JsonBodyDeserializer.cs">
+      <Link>ModelBinding\DefaultBodyDeserializers\JsonBodyDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\DefaultBodyDeserializers\XmlBodyDeserializer.cs">
+      <Link>ModelBinding\DefaultBodyDeserializers\XmlBodyDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\DefaultConverters\CollectionConverter.cs">
+      <Link>ModelBinding\DefaultConverters\CollectionConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ModelBinding\DefaultConverters\FallbackConverter.cs">
+      <Link>ModelBinding\DefaultConverters\FallbackConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Responses\GenericFileResponse.cs">
+      <Link>Responses\GenericFileResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Responses\JsonResponse.cs">
+      <Link>Responses\JsonResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Responses\JsonSettings.cs">
+      <Link>Responses\JsonSettings.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Responses\RedirectResponse.cs">
+      <Link>Responses\RedirectResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Responses\XmlResponse.cs">
+      <Link>Responses\XmlResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\DefaultNancyModuleBuilder.cs">
+      <Link>Routing\DefaultNancyModuleBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\DefaultRouteCacheProvider.cs">
+      <Link>Routing\DefaultRouteCacheProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\DefaultRoutePatternMatcher.cs">
+      <Link>Routing\DefaultRoutePatternMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\DefaultRouteResolver.cs">
+      <Link>Routing\DefaultRouteResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\INancyModuleBuilder.cs">
+      <Link>Routing\INancyModuleBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\IRouteCache.cs">
+      <Link>Routing\IRouteCache.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\IRouteCacheProvider.cs">
+      <Link>Routing\IRouteCacheProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\IRoutePatternMatcher.cs">
+      <Link>Routing\IRoutePatternMatcher.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\IRoutePatternMatchResult.cs">
+      <Link>Routing\IRoutePatternMatchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\IRouteResolver.cs">
+      <Link>Routing\IRouteResolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\MethodNotAllowedRoute.cs">
+      <Link>Routing\MethodNotAllowedRoute.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\NotFoundRoute.cs">
+      <Link>Routing\NotFoundRoute.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\Route.cs">
+      <Link>Routing\Route.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\RouteCache.cs">
+      <Link>Routing\RouteCache.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\RouteDescription.cs">
+      <Link>Routing\RouteDescription.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Routing\RoutePatternMatchResult.cs">
+      <Link>Routing\RoutePatternMatchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Security\ModuleSecurity.cs">
+      <Link>Security\ModuleSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Security\SecurityConventions.cs">
+      <Link>Security\SecurityConventions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Session\CookieBasedSessions.cs">
+      <Link>Session\CookieBasedSessions.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Session\DefaultSessionObjectFormatter.cs">
+      <Link>Session\DefaultSessionObjectFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Session\IFormatterSelector.cs">
+      <Link>Session\IFormatterSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Session\ISession.cs">
+      <Link>Session\ISession.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Session\ISessionObjectFormatter.cs">
+      <Link>Session\ISessionObjectFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Session\NullSessionProvider.cs">
+      <Link>Session\NullSessionProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\Session\Session.cs">
+      <Link>Session\Session.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\TinyIoc\TinyIoC.cs">
+      <Link>TinyIoc\TinyIoC.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\DefaultViewFactory.cs">
+      <Link>ViewEngines\DefaultViewFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\DefaultViewLocator.cs">
+      <Link>ViewEngines\DefaultViewLocator.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\IViewEngine.cs">
+      <Link>ViewEngines\IViewEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\IViewFactory.cs">
+      <Link>ViewEngines\IViewFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\IViewLocator.cs">
+      <Link>ViewEngines\IViewLocator.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\IViewSourceProvider.cs">
+      <Link>ViewEngines\IViewSourceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\ResourceViewSourceProvider.cs">
+      <Link>ViewEngines\ResourceViewSourceProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\SuperSimpleViewEngine.cs">
+      <Link>ViewEngines\SuperSimpleViewEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\SuperSimpleViewEngineWrapper.cs">
+      <Link>ViewEngines\SuperSimpleViewEngineWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Nancy\ViewEngines\ViewLocationResult.cs">
+      <Link>ViewEngines\ViewLocationResult.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Bootstrapper\" />
+    <Folder Include="Cookies\" />
+    <Folder Include="Cryptography\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="IO\" />
+    <Folder Include="Json\" />
+    <Folder Include="ModelBinding\" />
+    <Folder Include="Properties\" />
+    <Folder Include="Responses\" />
+    <Folder Include="Routing\" />
+    <Folder Include="Security\" />
+    <Folder Include="Session\" />
+    <Folder Include="TinyIoc\" />
+    <Folder Include="ViewEngines\" />
+    <Folder Include="ModelBinding\DefaultBodyDeserializers\" />
+    <Folder Include="ModelBinding\DefaultConverters\" />
+  </ItemGroup>
+</Project>
